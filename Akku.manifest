@@ -1,0 +1,19 @@
+#!r6rs ; -*- mode: scheme; coding: utf-8 -*-
+(import (akku format manifest))
+
+(akku-package ("ufo-cuda" "0.1.0-alpha.0")
+  (synopsis "CUDA driver API bindings for Chez Scheme")
+  (description
+   "ufo-cuda provides Chez Scheme FFI bindings for the NVIDIA CUDA driver"
+   "API (libcuda.so): device and context management, device memory,"
+   "module loading, kernel launching, and streams."
+   ""
+   "Kernels are compiled ahead of time with nvcc to cubin/PTX and loaded"
+   "at runtime, so no C compilation is needed when the library is used."
+   ""
+   "The library is pure Scheme and has no dependencies.  The CUDA driver"
+   "library is located via $UFO_CUDA_LIB or a list of default paths"
+   "(including the NixOS driver location /run/opengl-driver/lib).")
+  (authors "ufo")
+  (license "MIT")
+)

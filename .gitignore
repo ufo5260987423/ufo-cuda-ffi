@@ -1,0 +1,10 @@
+# Akku
+/.akku/
+# Compiled CUDA kernels
+*.cubin
+*.fatbin
+# nix
+/result
+# flake.lock pins a machine-local nixpkgs store path; regenerate with
+# `nix develop` (or `nix flake lock`) on each machine.
+/flake.lock
